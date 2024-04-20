@@ -22,23 +22,57 @@ body {
     margin: 0;
     padding: 0;
 }
-.highlight-yellow {
-    background-color: #ffed75;
+#principalCard, #textChanged, #technologies{
+    opacity: 0;
+    visibility: hidden;
 }
-.highlight-green {
-    background-color: #8cf286;
+
+#technologies{
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    visibility: visible;
 }
-.highlight-pink {
-    background-color: #ff9ece;
+
+#textChanged{
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    visibility: visible;
 }
-.highlight-blue {
-    background-color: #9cd1ff;
+
+#principalCard{
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    visibility: visible;
+    margin: 3%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.highlight-purple {
-    background-color: #e0b3ff;
+
+
+@keyframes animacion {
+    0%{opacity: 0;}
+    10%{opacity: 0.0;}
+    25%{opacity: 0.1;}
+    30%{opacity: 0.2;}
+    50%{opacity: 0.5;}
+    60%{opacity: 0.6;}
+    75%{opacity: 0.75;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}    
 }
 
 /*BUTTONS*/
+button{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
 .button{
     background-color: transparent; /* Fondo transparente */
     color: white; /* Color del texto blanco */
@@ -84,20 +118,8 @@ h4{
     
 }
 
-#section1>div{
-    margin: 3%;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-button{
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
+
 
 #photo{
     -webkit-box-shadow: 3px 3px 5px -1px rgba(0,0,0,0.75);
@@ -146,7 +168,7 @@ button{
     
 }
 
-#section2 div{
+#section2 div{    
     margin: 0%;
     padding-left: 30px;
     width: 85%;
@@ -180,14 +202,16 @@ button{
     line-height: 1.5;
 }
 
-#technologiesAndLanguages{
-    margin-top: 20px;
+
+#technologiesAndLanguages{        
+    margin-top: 20px;    
 }
 
 /*FOOTER*/
 
 
 footer{
+    bottom: 0%;
     margin: 0%;
     padding: 0%;
     height: 4%;
@@ -211,6 +235,23 @@ footer p{
     background-color: rgb(88, 202, 126);
     padding: 0.1em 0.2em;
 }
+.highlight-yellow {
+    background-color: #ffed75;
+    
+}
+.highlight-green {
+    background-color: #8cf286;
+}
+.highlight-pink {
+    background-color: #ff9ece;
+}
+.highlight-blue {
+    background-color: #9cd1ff;
+}
+.highlight-purple {
+    background-color: #e0b3ff;
+}
+
 
 .multicolor-text {   
     background: linear-gradient(to left,
@@ -230,9 +271,131 @@ footer p{
 /*ANIMACIÓN*/
 
 .imagen-con-zoom {
-    transition: transform 0.3s ease; /* Transición suave para el zoom */
+    transition: transform 0.3s ease; 
 }
 
 .imagen-con-zoom:hover {
-    transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+    transform: scale(1.1); 
+}
+
+
+.texto-con-zoom {
+    transition: font-size 0.3s ease;
+}
+
+.texto-con-zoom:hover {
+    font-size: 1.05em; 
+}
+
+#texto{
+    cursor: pointer;
+}
+/* Estilos de la lluvia de corazones */
+.corazon {
+    position: fixed; /* Posicionamiento fijo */
+    color: red;
+    font-size: 50px;
+    pointer-events: none; /* Evita que los corazones afecten los clics en otros elementos */
+    animation: caida 1.5s linear infinite; /* Animación de caída */
+}
+
+@keyframes caida {
+    0% { transform: translateY(-1000px); }
+    100% { transform: translateY(100vh); } /* El corazón cae hasta el final de la ventana */
+}
+
+/*
+
+@media (max-width: 700px) {
+    main {
+        padding-bottom: 200px;
+      flex-direction: column;
+    }  
+    section {
+      width: 100%; 
+    }  
+    #section2 {
+      width: 100%; 
+      margin-top: 60px; 
+    }
+    footer {
+        position: fixed;
+        bottom: 0; 
+        width: 100%;
+    }
+}  
+
+*/
+
+
+@media(max-width: 700px){
+
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        position: relative;
+    }
+    main{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        clip-path:none;    
+    }
+
+    #changeLanguage{
+        color: #333;
+    }
+
+    #section1{
+        width: 100%;
+        height: 48%;
+        padding: 70px 0px;    
+    }
+    #section2{
+        width: 100%;
+        height: 55%;
+        padding: 100px 0px 160px;
+        clip-path:none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+    }
+    #section2 div{
+        display: flex;
+        justify-content: center;        
+        padding-left: 0%;
+        text-align: center;
+        align-items: center;
+        
+    }
+
+    #technologiesAndLanguages{
+        width: 400px;
+    }
+
+    footer{
+        position: fixed; 
+        bottom: 0; 
+        width: 100%; 
+        padding: 10px; 
+        text-align: center;         
+    }
+}
+
+
+@media(max-width: 400px){
+    #section2{
+        width: 100%;
+        height: 55%;
+        padding: 150px 0px 250px;        
+        clip-path:none;
+    }
+
+    #technologiesAndLanguages{
+        width: 300px;
+    }
+
+    
 }

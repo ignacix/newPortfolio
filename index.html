@@ -6,12 +6,13 @@
     <title>Ignacio Jerez</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="icon" href="src/logo.png" type="image/png">
 </head>
 <body>
     <button class="button" id="changeLanguage">EN</button>         
     <main>
         <section id="section1">
-            <div>
+            <div id="principalCard">
                 <img id="photo" src="src/img_perfil.jpeg" alt="Imagen de perfil de Ignacio Jerez">
                 <h1>Ignacio Jerez</h1>
                 <h3>(He/Him)</h3>
@@ -28,12 +29,12 @@
         <section id="section2">
         <div>
             <div id="textChanged">                                
-                <h1>¡<mark class="highlight-yellow">Hola</mark> I'm <strong>Ignacio Jerez</strong>, a Developer from <mark class="highlight-green">Argentina</mark>.</h1>
-                <p>I'm currently in the fifth semester of the University Technician degree in Informatic Systems at the <mark class="highlight-yellow" >National Technological University - FRGP</mark> , in Buenos Aires. Throughout my academic journey, I've worked with various technologies to develop applications, including console, desktop, and web applications.</p>
-                <p>I would love to be part of a work team where <mark class="highlight-purple">communication</mark>, <mark class="highlight-blue">collaboration</mark>, and <mark class="highlight-green">teamwork</mark> are <mark class="highlight-pink">essential</mark> to create innovative technological solutions. I'm known for my <mark class="highlight-yellow">curious attitude</mark> and my <mark class="highlight-yellow">commitment</mark> to <mark class="highlight-yellow">learning</mark> and <mark class="highlight-yellow">continuous improvement</mark>.</p>
-                <p>If you're interested in getting to know me, feel free to <mark class="highlight-pink">contact me</mark>!</p>              
+                <h1>¡<mark class="highlight-yellow texto-con-zoom">Hola</mark> I'm <strong>Ignacio Jerez</strong>, a Developer from <mark class="highlight-green texto-con-zoom">Argentina</mark>.</h1>
+                <p>I'm currently in the fifth semester of the University Technician degree in Informatic Systems at the <mark class="highlight-yellow" >National Technological University - FRGP</mark> , in <b>Buenos Aires</b>. Throughout my academic journey, I've worked with various technologies to develop applications, including console, desktop, and web applications.</p>
+                <p>I would love to be part of a work team where <mark class="highlight-purple texto-con-zoom">communication</mark>, <mark class="highlight-blue texto-con-zoom">collaboration</mark>, and <mark class="highlight-green texto-con-zoom">teamwork</mark> are <mark class="highlight-pink texto-con-zoom">essential</mark> to create innovative technological solutions. I'm known for my <mark class="highlight-yellow texto-con-zoom">curious attitude</mark> and my <mark class="highlight-yellow texto-con-zoom">commitment</mark> to <mark class="highlight-yellow texto-con-zoom">learning</mark> and <mark class="highlight-yellow texto-con-zoom">continuous improvement</mark>.</p>
+                <p>If you're interested in getting to know me, feel free to <mark class="highlight-pink texto-con-zoom">contact me</mark>!</p>              
             </div>
-            <div>
+            <div id="technologies">
                 <h4><b>Technologies/Languages</b> </h4>
                 <div id="technologyBox">                    
                     <img id="technologiesAndLanguages" src="https://skillicons.dev/icons?i=git,html,js,css,cs,dotnet,bootstrap,github,java,mysql" />                    
@@ -43,7 +44,7 @@
         </section>        
     </main>   
     <footer>
-        <p> <b><span class="multicolor-text">"stay hungry, stay foolish"</span></b> Made with ❤️ by Igna - 2024 </p>
+        <p> <b><span class="multicolor-text">"stay hungry, stay foolish"</span></b> Made with <span id="texto">❤️</span> by Igna - 2024 </p>
     </footer>
     <script src="index.js"></script>
 </body>
