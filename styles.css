@@ -399,3 +399,12 @@ footer p{
 
     
 }
+@media (max-width: 400px) and (max-height: 750px) {
+    #section1{
+        padding: 150px 0px;    
+    }
+    #section2{
+        padding:  300px 0px 320px;
+    }
+}
+
